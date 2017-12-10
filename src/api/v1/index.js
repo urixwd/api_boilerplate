@@ -1,6 +1,6 @@
 const express = require('express');
 const models = require('./models/index');
-const { celebrate, errors } = require('celebrate');
+const validation = require('express-validation');
 
 // create router for version 1
 const apiRoutes = express.Router();
@@ -35,7 +35,7 @@ apiRoutes.get('/users', (req, res) => {
 /*
  * POST /user route insert a user
  */
-apiRoutes.post('/user', celebrate(models.User), (req, res) => {
+apiRoutes.post('/user', validation(models.User), (req, res) => {
   res.json([
     {
       id: 1,
@@ -46,8 +46,14 @@ apiRoutes.post('/user', celebrate(models.User), (req, res) => {
 });
 
 
-// errors
-apiRoutes.use(errors());
+/*
+ * validation errors
+ */
+apiRoutes.use((err, req, res, next) => {
+  if (err instanceof validation.ValidationError) return res.status(err.status).json(err);
+
+  return next();
+});
 
 module.exports = apiRoutes;
 
