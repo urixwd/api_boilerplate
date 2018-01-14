@@ -1,6 +1,7 @@
 apps:
   - script   : ./www.js
     name     : 'api-app'
+    trace    : true
     instances:
     env    :
       PORT    : 3000
