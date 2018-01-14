@@ -19,5 +19,8 @@ npm install
 2. pm2 start ecosystem.config.yml
 3. pm2 monit
 
+### Monitoring 
+pm2 link PUBLIC_HERE SECRET_HERE
+
 
 

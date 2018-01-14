@@ -1,6 +1,7 @@
 const express = require('express');
 const models = require('./models/index');
 const validation = require('express-validation');
+const chalk = require('chalk'); // colorful console.log
 
 // create router for version 1
 const apiRoutes = express.Router();
@@ -10,6 +11,7 @@ const apiRoutes = express.Router();
  * EXAMPLE
  */
 apiRoutes.get('/users', (req, res) => {
+  console.log(chalk.green('users route!')); // eslint-disable-line
   res.json([
     {
       id: 1,
