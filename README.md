@@ -16,7 +16,7 @@ npm install
 
 #### Production using PM2
 1. Navigate to the root folder
-2. pm2 start ecosystem.config.yaml
+2. pm2 start ecosystem.config.yml
 3. pm2 monit
 
 

@@ -1,5 +1,5 @@
 apps:
-  - script   : ./server.js
+  - script   : ./www.js
     name     : 'api-app'
     instances:
     env    :
