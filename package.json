@@ -10,7 +10,8 @@
     "lint": "esw build src",
     "lint:watch": "npm run lint -- --watch",
     "start": "NODE_ENV=production node www.js",
-    "start-dev": "NODE_ENV=dev node --inspect www.js"
+    "start-dev": "NODE_ENV=dev node --inspect www.js",
+    "start-dev-prof": "NODE_ENV=dev node --prof www.js"
   },
   "author": "Uri Michaeli",
   "license": "MIT",
@@ -23,6 +24,7 @@
     "celebrate": "^7.0.3",
     "chalk": "^2.3.0",
     "cookie-parser": "^1.4.3",
+    "crypto-js": "^3.1.9-1",
     "express": "^4.16.2",
     "express-validation": "^1.0.2",
     "joi": "^13.0.2",

@@ -22,5 +22,9 @@ npm install
 ### Monitoring 
 pm2 link PUBLIC_HERE SECRET_HERE
 
+### Node inherent profiling 
+node --prof crypto.js / npm start-dev-prof
+node --prof-process isolate-0x101804a00-v8.log (just an example for a filename)
+
 
 
