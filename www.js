@@ -1,3 +1,6 @@
+const atatus = require("atatus-node");
+atatus.start({ apiKey: "YOUR_KEY" });
+
 const open = require('open');
 const chalk = require('chalk'); // colorful console.log
 const app = require('./src/server');
