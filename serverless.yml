@@ -22,8 +22,3 @@ custom:
   serverless-offline:
     babelOptions:
       presets: ["es2017"]
-
-#Access Key ID:
-#AKIAJU3UC6K6KNGIFSLQ
-#Secret Access Key:
-#efrT4q1cS+ZBc5NlG+yoraxB4wysPNCCheCoG1+3
